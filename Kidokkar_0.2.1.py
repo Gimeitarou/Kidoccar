@@ -20,7 +20,7 @@ def continue_process():#ユーザーが「全画面にしました！」ボタ�
     Res = ''
     while Res != 'no':
         for i in range(5):
-            pyautogui.click(1210, 452, button="right",interval=0.5)#0.5secごと
+            pyautogui.click(1210, 452, button="right",interval=0.7)#0.7secごと
         Res = messagebox.askquestion("既読操作の継続確認", "まだ通知が残っているのなら'はい'を、全て既読にできたのなら'いいえ'を押してください。")
     
     messagebox.showinfo("挨拶", "動作は以上です。\nご協力ありがとうございました。")#最終UI
