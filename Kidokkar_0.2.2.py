@@ -20,7 +20,7 @@ def continue_process():#ユーザーが「全画面にしました！」ボタ�
     Res = ''
     while Res != 'no':
         for i in range(5):
-            pyautogui.click(1210, 452, button="right",interval=0.7)#0.7secごと
+            pyautogui.click(1210, 452, button="left",interval=0.7)#0.7secごと
         Res = messagebox.askquestion("既読操作の継続確認", "まだ通知が残っているのなら'はい'を、全て既読にできたのなら'いいえ'を押してください。")
     
     messagebox.showinfo("挨拶", "動作は以上です。\nご協力ありがとうございました。")#最終UI
@@ -35,8 +35,7 @@ instruction_label = tk.Label(
     root,
     text="<<プログラムを使うにあたっての注意事項です。>>\n"
         +"\n通知のなかには見逃すと不利益を被るたぐいのものがあります。"
-        +"\n既読をつけてよいとあなたが判断した通知のみ"
-        +"\nプログラムが既読をつける対象となるようにあなたが責任を持ってください。\n"
+        +"\n大切な通知がないかを先に確認した上でこのプログラムを使ってください。\n"
         +"\nご理解の程よろしくお願いします。",
     font=("Helvetica", 12)
 )
