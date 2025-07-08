@@ -23,11 +23,11 @@ def continue_process():#ユーザーが「全画面にしました！」ボタ�
             pyautogui.click(1210, 452, button="right",interval=1)#1secごと
         Res = messagebox.askquestion("既読操作の継続確認", "まだ通知が残っているのなら'はい'を、全て既読にできたのなら'いいえ'を押してください。")
     
-    messagebox.showinfo("挨拶", "ご協力ありがとうございました。終わりです。")#最終UI
+    messagebox.showinfo("挨拶", "動作は以上です。\nご協力ありがとうございました。")#最終UI
 
 #メインUIの作成(一番はじめの動作)
 root = tk.Tk()
-root.title("注意喚起")
+root.title("Kiddokaar")
 root.geometry("660x240") #UIサイズ
 
 #初めに表示されるUI,表示1
