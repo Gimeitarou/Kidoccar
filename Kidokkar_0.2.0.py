@@ -8,8 +8,8 @@ from tkinter import messagebox
 def start_process():#ふたつめのUI,表示2,注意喚起を理解した！ボタンを押した後のUI
     instruction_label.config(text="Gaidai Passで通知画面を開き、ページを全画面表示にしてください。"
                                +"\n全画面にできたら、下にあるボタンを押してください。\n"
-                               +"\n1回の動作ごとに、10個の通知を既読にしていきます。"
-                               +"\n10個既読し終えたら通知がまだ残っているかを適宜確認します。\n"
+                               +"\n1回の動作ごとに、5個の通知を既読にしていきます。"
+                               +"\n5個既読し終えたら通知がまだ残っているかを適宜確認します。\n"
                                +"\nそれでは、全画面にでき次第、ボタンを押してくださいね。")
     start_button.pack_forget() #注意喚起を理解した！ボタンを非表示にする
     confirm_button.pack(pady=20) #全画面にしました！ボタンを表示する
@@ -19,15 +19,15 @@ def continue_process():#ユーザーが「全画面にしました！」ボタ�
     #以下、メイン処理
     Res = ''
     while Res != 'no':
-        for i in range(10):
-            pyautogui.click(1210, 452, button="right",interval=1)#1secごと
+        for i in range(5):
+            pyautogui.click(1210, 452, button="right",interval=0.5)#0.5secごと
         Res = messagebox.askquestion("既読操作の継続確認", "まだ通知が残っているのなら'はい'を、全て既読にできたのなら'いいえ'を押してください。")
     
     messagebox.showinfo("挨拶", "動作は以上です。\nご協力ありがとうございました。")#最終UI
 
 #メインUIの作成(一番はじめの動作)
 root = tk.Tk()
-root.title("Kiddokaar")
+root.title("Kidokkar")
 root.geometry("660x240") #UIサイズ
 
 #初めに表示されるUI,表示1
