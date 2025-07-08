@@ -27,7 +27,7 @@ def continue_process():#ユーザーが「全画面にしました！」ボタ�
 
 #メインUIの作成(一番はじめの動作)
 root = tk.Tk()
-root.title("Kidokkar")
+root.title("Kidoccar")
 root.geometry("660x240") #UIサイズ
 
 #初めに表示されるUI,表示1
