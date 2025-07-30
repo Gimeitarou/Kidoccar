@@ -12,7 +12,7 @@ if FirstRes == 'ok':
     SecondRes = ''
     while SecondRes != 'no':
         for i in range(10):
-            pyautogui.click(1210, 452, button="right",interval=1)#1secごと
+            pyautogui.click(1208, 440, button="right",interval=1)#1secごと
         SecondRes = messagebox.askquestion("既読操作の継続確認", "まだ通知が残っているのなら'はい'を、全て既読にできたのなら'いいえ'を押してください。")
 
 messagebox.showinfo("UI", "ご協力ありがとうございました。終わりです。")
